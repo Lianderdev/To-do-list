@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-white);
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-primary: #161626;
+    --color-secondary: #3b3a4a;
+    --color-white: #fff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--color-primary);
+    position: relative;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+main .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-secondary);
+    padding-bottom: 20px;
+}
+
+main .header h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+main .header .circles-iphone {
+    display: flex;
+    gap: 5px;
+}
+
+main .header .circles-iphone .circles {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+}
+
+main .header .circles-iphone .circle1 {
+    background-color: #fc5f57;
+}
+
+main .header .circles-iphone .circle2 {
+    background-color: #fdbc2e;
+}
+
+main .header .circles-iphone .circle3 {
+    background-color: #28c83f;
+}
+
+main .add-task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+main .add-task input {
+    width: 100%;
+    height: 4rem;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: var(--color-secondary);
+    font-style: italic;
+    font-weight: 600;
+    border: none;
+    font-size: 1.5rem;
+}
+
+main .add-task input:focus {
+    outline: none;
+}
+
+main .add-task .button-add {
+    width: 50px;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+main .tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .tasks .task {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    border-radius: 5px;    
+    background-color: rgba(59, 58, 74, 0.24);
+    z-index: 10;
+    padding: 5px 20px;
+    backdrop-filter: blur(10px);
+}
+
+main .tasks .task .task-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%;
+}
+
+main .tasks .task .task-info .task-paragraph {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 90%;
+}
+
+.paragraph-checked { 
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+main .tasks .task .checked {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+}
+
+main .tasks .task .checked i {
+    color: #28c83f;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+main .tasks .task .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+main .tasks .task .editar {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+}
+
+main .tasks .task .editar i {
+    color: #fdbc2e;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+main .tasks .task .apagar {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
+}
+
+main .tasks .task .apagar i {
+    color: #fc5f57;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.main-img {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+}
