@@ -33,7 +33,7 @@ main {
     max-width: 800px;
     height: 100vh;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px 20px;
 }
 
 main .header {
@@ -46,9 +46,17 @@ main .header {
 }
 
 main .header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 3rem;
     line-height: 3rem;
 }
+
+main .header h1 .icon-todolist {
+    width: 3rem;
+}
+
 
 main .header .circles-iphone {
     display: flex;
@@ -96,6 +104,7 @@ main .add-task input {
 
 main .add-task input:focus {
     outline: none;
+    border: 2px solid gray;
 }
 
 main .add-task .button-add {
@@ -103,6 +112,7 @@ main .add-task .button-add {
     border-radius: 5px;
     background-color: var(--color-secondary);
     font-size: 1.5rem;
+    border: 2px solid gray;
 }
 
 main .tasks {
@@ -113,6 +123,7 @@ main .tasks {
 
 main .tasks .task {
     width: 100%;
+    min-height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,6 +163,7 @@ main .tasks .task .checked {
     place-items: center;
     border-radius: 50%;
     background-color: var(--color-secondary);
+    border: 2px solid gray;
 }
 
 main .tasks .task .checked i {
@@ -166,12 +178,13 @@ main .tasks .task .buttons {
 }
 
 main .tasks .task .editar {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     display: grid;
     place-items: center;
     border-radius: 5px;
     background-color: var(--color-secondary);
+    border: 2px solid gray;
 }
 
 main .tasks .task .editar i {
@@ -181,11 +194,12 @@ main .tasks .task .editar i {
 }
 
 main .tasks .task .apagar {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     display: grid;
     place-items: center;
     border-radius: 5px;
+    border: 2px solid gray;
     background-color: var(--color-secondary);
 }
 
