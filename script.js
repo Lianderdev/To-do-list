@@ -65,10 +65,17 @@ function createTask() {
     // Configurando as funções dos botões 
     button_checked.addEventListener('click', () => {
       p.classList.toggle('paragraph-checked');
+      button_checked.classList.toggle('checked')
+      button_checked.classList.toggle('checked-active')
     });
 
     button_apagar.addEventListener('click', () => {
       item.remove();
     });
+
+    button_editar.addEventListener('click', () => {
+      const item_editado = prompt('digite algo')
+      p.textContent = item_editado
+    })
   }
 }
