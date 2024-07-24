@@ -75,7 +75,13 @@ function createTask() {
 
     button_editar.addEventListener('click', () => {
       const item_editado = prompt('digite algo')
-      p.textContent = item_editado
+
+      if (item_editado.length > 0 && item_editado.trim() !== '') {
+        p.textContent = item_editado
+      } 
+
+      console.log()
+
     })
   }
 }
