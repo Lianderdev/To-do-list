@@ -48,7 +48,7 @@ function createTask() {
     const icone_editar = document.createElement('i');
 
     icone_apagar.classList.add('fa-solid', 'fa-x');
-    icone_editar.classList.add('fa-solid', 'fa-pencil');
+    icone_editar.classList.add('fa-solid', 'fa-pen-to-square');
 
     button_apagar.appendChild(icone_apagar);
     button_editar.appendChild(icone_editar);
@@ -71,6 +71,15 @@ function createTask() {
 
     button_apagar.addEventListener('click', () => {
       item.remove();
+
+      const notification_turned_task = document.querySelector('.notification-turned-task')
+
+      notification_turned_task.style.display = 'block'
+
+      setTimeout(() => {
+        notification_turned_task.style.display = 'none'
+      },3000)
+
     });
 
     button_editar.addEventListener('click', () => {
@@ -80,8 +89,24 @@ function createTask() {
         p.textContent = item_editado
       } 
 
+      const notification_edit_task = document.querySelector('.notification-edit-task')
+
+      notification_edit_task.style.display = 'block'
+
+      setTimeout(() => {
+        notification_edit_task.style.display = 'none'
+      },3000)
+
       console.log()
 
     })
+
+    const notification_create_task = document.querySelector('.notification-create-task')
+
+    notification_create_task.style.display = 'block'
+
+    setTimeout(() => {
+          notification_create_task.style.display = 'none'
+    },3000)
   }
 }
