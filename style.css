@@ -397,6 +397,31 @@ main .tasks .task .apagar i {
     text-transform: uppercase;
 }
 
+/* theme */
+.theme {
+    width: 3.5rem;
+    height: 2rem;
+    background-color: var(--color-secondary);
+    position: absolute;
+    bottom: 5rem;
+    left: 20px;
+    border-radius: 20px;
+    padding: 0.24rem;
+    cursor: pointer;
+}
+
+.theme .circle-theme {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    position: absolute;
+}
+
+.circle-theme-active {
+    right: 0.24rem;
+}
+
 /* Responsividade */
 @media (max-width: 500px) {
     html {

@@ -3,7 +3,6 @@ const add = document.querySelector('.button-add');
 
 
 const height = lista.offsetHeight;
-console.log(`A altura da caixa é: ${height}px`)
 
 add.addEventListener('click', createTask);
 
@@ -109,8 +108,6 @@ function createTask() {
         notification_edit_task.style.display = 'none'
       },2000)
 
-      console.log()
-
     })
 
     const notification_create_task = document.querySelector('.notification-create-task')
@@ -126,6 +123,16 @@ function createTask() {
     if (height >= 550) {
       lista.style.overflowY = 'scroll'
       lista.style.paddingRight = '20px'
+    } else {
+       lista.style.overflowY = 'hidden'
+      lista.style.paddingRight = '0px'
     }
   }
 }
+
+const theme = document.querySelector('.theme')
+const circle_theme = document.querySelector('.circle-theme')
+
+theme.addEventListener('click', () => {
+  circle_theme.classList.toggle('circle-theme-active')
+})
