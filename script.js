@@ -1,6 +1,10 @@
 const lista = document.querySelector('.tasks');
 const add = document.querySelector('.button-add');
 
+
+const height = lista.offsetHeight;
+console.log(`A altura da caixa é: ${height}px`)
+
 add.addEventListener('click', createTask);
 
 // Adiciona o event listener para o campo de entrada
@@ -67,6 +71,14 @@ function createTask() {
       p.classList.toggle('paragraph-checked');
       button_checked.classList.toggle('checked')
       button_checked.classList.toggle('checked-active')
+
+      const notification_checked_task = document.querySelector('.notification-checked-task')
+
+      notification_checked_task.style.display = 'block'
+
+      setTimeout(() => {
+        notification_checked_task.style.display = 'none'
+      },2000)
     });
 
     button_apagar.addEventListener('click', () => {
@@ -78,7 +90,7 @@ function createTask() {
 
       setTimeout(() => {
         notification_turned_task.style.display = 'none'
-      },3000)
+      },2000)
 
     });
 
@@ -95,7 +107,7 @@ function createTask() {
 
       setTimeout(() => {
         notification_edit_task.style.display = 'none'
-      },3000)
+      },2000)
 
       console.log()
 
@@ -107,6 +119,13 @@ function createTask() {
 
     setTimeout(() => {
           notification_create_task.style.display = 'none'
-    },3000)
+    },2000)
+
+    const height = lista.offsetHeight;
+
+    if (height >= 550) {
+      lista.style.overflowY = 'scroll'
+      lista.style.paddingRight = '20px'
+    }
   }
 }
